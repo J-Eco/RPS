@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js" async></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>Janken Pon!</h1>
+    <div class="gameContainer">
+        <div class="scoreContainer">
+            <div id="userScore">Your Score: 0</div>
+            <div id="pcScore">PC Score: 0</div>
+        </div>
+        <div class="playContainer">
+            <button class="button" id="rock">Rock</button>
+            <button class="button" id="paper">Paper</button>
+            <button class="button" id="scissors">Scissors</button>
+        </div>
+        <span class="result" id="result"></span>
+    </div>
 </body>
 </html>
