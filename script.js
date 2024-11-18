@@ -83,6 +83,7 @@ function newGame() {
 
     const container = document.querySelector('.gameContainer');
     const div = Object.assign(document.createElement('div'), {className: "newGameBlock"});
+    const winner = document.createElement('p');
     const button = Object.assign(document.createElement('button'), {
         textContent: 'Replay Game?',
         id: 'replayButton',
@@ -103,6 +104,14 @@ function newGame() {
         div.remove();
     })
 
-    div.appendChild(button);
+    if (computerScore > 4) {
+        winner.textContent = `Winner: Computer, Score: ${computerScore}`;
+    }
+    else {
+        winner.textContent = `Winner: You, Score: ${humanScore}`;
+    }
+
+
+    div.append(winner, button);
     container.insertBefore(div, container.firstChild);
 }
